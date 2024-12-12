@@ -4,7 +4,7 @@ const MONGODB_URI = Deno.env.get("MONGODB_URI") || "";
 
 if (!MONGODB_URI) {
   console.error("MONGODB_URI is not set.");
-  Deno.exit(1);
+  Deno.exit(1)
 }
 const uri = MONGODB_URI;
 let mongooseClient: typeof mongoose
