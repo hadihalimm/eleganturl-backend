@@ -7,7 +7,7 @@ const app = new Hono();
 console.log(mongooseClient.connection.readyState)
 
 app.use("/*", cors())
-app.route("/url", urlController);
+app.route("", urlController);
 
 Deno.addSignalListener("SIGINT", () => {
     mongooseClient.disconnect()
